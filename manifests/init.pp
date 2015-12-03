@@ -35,7 +35,11 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class osad {
-
+class osad (
+  package_ensure = $::osad::params::package_ensure,
+  service_ensure = $::osad::params::service_ensure,
+  service_enable = $::osad::params::service_enable,
+) inherits osad::params
+{
 
 }
